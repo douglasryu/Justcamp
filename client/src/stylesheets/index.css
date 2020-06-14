@@ -1,0 +1,1313 @@
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+/* Nav bar css */
+.nav-container {
+    width: 100%;
+    height: 60px;
+    background-color: #FDFDFD;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #EBEBEB;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 4;
+}
+
+.nav__logo {
+    margin-right: auto;
+    font-size: 24px;
+    margin-left: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav__icon {
+    width: 20px;
+    display: inline-block
+}
+
+.nav__item {
+    font-size: 15px;
+    margin: 0px 15px;
+    padding-bottom: 2px;
+    box-sizing: border-box;
+    border-bottom: 1.5px solid transparent;
+    position: relative;
+    top: 1.5px;
+    transition: border-bottom 0.2s ease-in-out 0s;
+}
+
+.nav__item:hover {
+    border-bottom: 1.5px solid #40d9ac;
+}
+
+.nav__near,
+.nav__about,
+.nav__justcash {
+    cursor: not-allowed;
+}
+
+.nav__host {
+    font-size: 15px;
+    margin-right: 20px;
+    margin-left: 10px;
+    background-color: #40d9ac;
+    color: #ffffff;
+    border: 3px solid #40d9ac;
+    width: 110px;
+    height: 35px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.25s ease 0s;
+}
+
+.nav__host:hover {
+    background-color: #fdfdfd;
+    color: #40d9ac;
+    cursor: not-allowed;
+}
+
+/* Modal css */
+.modal__background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 5;
+}
+
+.modal__child {
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    width: 380px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    animation-name: slidein;
+    animation-duration: 0.5s;
+}
+
+@keyframes slidein {
+    from {
+        top: -200px;
+    }
+    to {
+        top: 50px;
+    }
+}
+
+.modal__header {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 40px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input-name-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form__input-firstname {
+    font-size: 18px;
+    border: 1px solid #000000;
+    margin: 20px 0px;
+    padding: 15px 20px;
+    width: 110px;
+    margin-right: 5px;
+}
+
+.form__input-lastname {
+    font-size: 18px;
+    border: 1px solid #000000;
+    margin: 20px 0px;
+    padding: 15px 20px;
+    width: 110px;
+    margin-left: 5px;
+}
+
+.form__input {
+    font-size: 18px;
+    border: 1px solid #000000;
+    margin: 20px 30px;
+    padding: 15px 20px;
+}
+
+.form__button {
+    background-color: #40d9ac;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0px 30px;
+    margin-top: 10px;
+    padding: 20px 0px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.demo__button {
+    background-color: #40d9ac;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0px 30px;
+    margin-top: 0px;
+    padding: 20px 0px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+/* Header css */
+.header__container {
+    height: 150px;
+    margin: auto;
+    margin-top: 110px;
+    max-width: 1020px;
+    width: 100%;
+}
+
+.header__maintext {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.header__subtext {
+    font-size: 22px;
+    font-weight: 400;
+    width: 515px;
+    line-height: 25px;
+    margin: 20px 0px 50px 0px;
+}
+
+.header__form {
+    height: 60px;
+    padding: 17px 17px 17px 0px;
+    box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.search__input {
+    width: 640px;
+    height: 60px;
+    font-size: 18px;
+    padding-left: 40px;
+    border: 1px solid #ebebeb;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    align-self: center;
+    margin-right: auto;
+    padding-right: 30px;
+}
+
+.search__suggestion-wrapper {
+    background-color: white;
+    position: relative;
+    z-index: 4;
+    border-radius: 4px;
+}
+
+.search__suggestion {
+    position: relative;
+    padding: 10px 0px 10px 24px;
+    font-size: 15px;
+    z-index: 4;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.search__suggestion:hover {
+    background-color: rgba(235,235,235,0.3);
+}
+
+.search__suggestion-logo {
+    display: inline-block;
+    width: 13px;
+}
+
+.header__search-icon {
+    position: relative;
+    left: 40px;
+    top: 15px;
+}
+
+.header__select {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333333;
+    padding: 10px;
+    margin: 0px auto;
+    margin-left: 13px;
+    border: 1px solid #ebebeb;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.header__form-button {
+    margin: 0px auto;
+    background-color: #40d9ac;
+    color: #ffffff;
+    width: 104px;
+    height: 54px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 2px;
+    text-align: center;
+    border: 3px solid #40d9ac;
+    transition: all 0.25s ease 0s;
+}
+
+.header__form-button:hover {
+    background-color: #fdfdfd;
+    color: #40d9ac;
+}
+
+
+/* Camplist css */
+.camplist {
+    max-width: 1060px;
+    width: 100%;
+    position: relative;
+    top: 150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+/* Campcard css */
+.campentry {
+    margin: 25px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    min-width: 300px;
+    height: 310px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.campentry__photo-container {
+    overflow: hidden;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.campentry__text-contianer {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    height: auto;
+    justify-content: space-between;
+}
+
+.campentry__text-header {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 5px 0px 5px;
+    margin-top: 15px;
+}
+
+.campentry__text {
+    font-size: 14px;
+    color: #757575;
+    margin: 0px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.campentry__price {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 5px 5px 5px;
+    align-self: flex-end;
+}
+
+/* Camp Details Page css */
+.camp-header__container {
+    position: relative;
+    top: -820px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.camp-header__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 500px;
+}
+
+.camp-header__image1 {
+    display: block;
+    max-height: 500px;
+    height: 500px;
+    max-width: 700px;
+    margin-left: 40px;
+}
+
+.camp-header__image2 {
+    display: block;
+    max-height: 500px;
+    height: 500px;
+    max-width: 700px;
+    margin-left: 40px;
+}
+
+.camp-header__image3 {
+    display: block;
+    max-height: 500px;
+    height: 500px;
+    max-width: 700px;
+    margin-left: 40px;
+}
+
+.previous {
+    font-size: 40px;
+    position: absolute;
+    top: 210px;
+    left: 30px;
+}
+
+.next {
+    font-size: 40px;
+    position: absolute;
+    top: 210px;
+    right: 30px;
+}
+
+.camp-header__header {
+    position: relative;
+    top: 50px;
+    left: 30%;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.camp-header__host-details {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+    left: 30%;
+}
+
+.camp-header__host-image {
+    width: 50px;
+    padding: 2px;
+    border-radius: 50%;
+    filter: invert(40%) sepia(11%) saturate(7488%) hue-rotate(333deg) brightness(101%) contrast(81%);
+    border: 1px solid rgba(0,0,0,0.4);
+}
+
+.camp-header__hostedby {
+    position: relative;
+    bottom: 45px;
+    left: 60px;
+    font-size: 15px;
+    font-weight: 700;
+    width: 100px;
+    z-index: 1;
+}
+
+.camp-header__host-name {
+    position: relative;
+    bottom: 45px;
+    left: 60px;
+    font-size: 15px;
+    width: 100px;
+    z-index: 1;
+}
+
+.camp-header__details-summary {
+    font-size: 15px;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    bottom: 85px;
+    left: 10%;
+    margin-left: 40px;
+    z-index: 1;
+}
+
+.invisible {
+    top: 0;
+    height: 600px;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.form-invisible {
+    z-index: 1;
+    position: sticky;
+    top: 60px;
+}
+
+.booking__form-container {
+    position: relative;
+    top: 0px;
+    left: 70vw;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+    width: 300px;
+    height: auto;
+    z-index: 1;
+}
+
+.booking__form-price {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 0px 3px 10px;
+}
+
+.booking__pernight {
+    color: #757575;
+    padding: 0px 0px 20px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.booking__logistics {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+}
+
+.booking__form-checkin {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 0px 5px 10px;
+}
+
+.booking__form-checkin-input {
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    top: 5px;
+}
+
+.booking__form-checkout {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 0px 5px 10px;
+}
+
+.booking__form-checkout-input {
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    top: 5px;
+}
+
+.booking__form-guest {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 0px 5px 15px;
+}
+
+.booking__form-guest-input {
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    top: 5px;
+    left: 22px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+}
+
+.booking__form-subtotal-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.booking__form-subtotal {
+    margin: 20px 0px 20px 10px;
+}
+
+.booking__form-subtotal-value {
+    margin: 20px 10px 20px 0px;
+}
+
+.booking__form-button {
+    display: block;
+    padding: 20px 95px;
+    margin: 10px auto;
+    background-color: #40d9ac;
+    border-radius: 2px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.booking__form-button-signin {
+    display: block;
+    padding: 20px 115px;
+    margin: 10px auto;
+    background-color: #40d9ac;
+    border-radius: 2px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.booking__form-button-review {
+    display: block;
+    padding: 20px 87px;
+    margin: 10px auto;
+    background-color: #40d9ac;
+    border-radius: 2px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.camp-information__container {
+    position: relative;
+    top: -1050px;
+    left: 30%;
+    margin-bottom: 10px;
+}
+
+.camparea__container {
+    display: flex;
+    width: 800px;
+}
+
+.camparea__type-container {
+    display: flex;
+    align-items: center;
+}
+
+.camparea__header {
+    margin-right: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 20px 20px;
+}
+
+.camparea__icon {
+    width: 20px;
+    display: inline-block;
+    margin: 15px 0px 0px 0px;
+}
+
+.camparea__type {
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    margin: 15px 0px 0px 10px;
+}
+
+.camp-activities__container {
+    position: relative;
+    top: -970px;
+    left: 30%;
+    width: 730px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 60px 20px 20px 20px;
+}
+
+.camp-activities__header {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.camp-activities__text {
+    font-size: 15px;
+    padding-top: 5px;
+    color: #757575
+}
+
+.camp-activities__icon-container {
+    display: flex;
+    width: 1000px;
+}
+
+.camp-activities__icon {
+    width: 70px;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+    padding: 10px 10px;
+    margin: 15px 15px 0px 0px;
+}
+
+.camp-activities__icon-text {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* About css */
+.about__container {
+    position: relative;
+    top: 250px;
+    padding-top: 50px;
+    border-top: 1px solid #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__image {
+    width: 300px;
+    height: 300px;
+}
+
+.about__header {
+    font-size: 24px;
+    font-weight: 600;
+    width: 60%;
+    text-align: center;
+}
+
+/* Press css */
+.press__container {
+    position: relative;
+    top: 350px;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #ebebeb;
+}
+
+.press__header {
+    margin: 30px auto 30px auto;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.press__icon-container {
+    width: 50%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.press__icon {
+    opacity: 0.4;
+}
+
+/* Footer css */
+.footer__border {
+    position: relative;
+    top: 470px;
+    border-top: 1px solid #ebebeb;
+
+}
+
+.footer__container {
+    width: 60%;
+    margin: 0px auto;
+}
+
+.footer__logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.footer__icon {
+    width: 20px;
+    display: inline-block;
+    color: rgb(231, 73, 73);
+    filter: invert(40%) sepia(11%) saturate(7488%) hue-rotate(333deg) brightness(101%) contrast(81%);
+}
+
+.footer__sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+}
+
+.footer__section-header {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer__section-item {
+    font-size: 15px;
+    margin-bottom: 10px;
+    cursor: not-allowed;
+}
+
+.footer__section-text {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.createdby {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.createdby__name {
+    font-size: 15px;
+}
+
+.createdby__name:hover {
+    color: rgb(231, 73, 73);
+    cursor: pointer;
+}
+
+.createdby__github {
+    position: relative;
+    top: 5px;
+    margin-left: 5px;
+}
+
+.footer__end {
+    margin-top: 40px;
+    height: 60px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__end-left {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer__end-right {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.map-container {
+    position: relative;
+    top: -860px;
+    margin-bottom: -700px;
+}
+
+
+
+/* Profile Page css */
+.profile__page {
+    margin-bottom: -328px;
+    overflow-x: hidden;
+}
+
+.profile__userinfo-container {
+    position: relative;
+    top: 130px;
+    left: 15%;
+}
+
+.profile__userinfo-container {
+    width: 280px;
+    height: auto;
+    border: 1px solid #EBEBEB;
+}
+
+.profile__userinfo-picname {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.profile__pic {
+    width: 50px;
+    padding: 2px;
+    border-radius: 50%;
+    margin: 30px;
+    filter: invert(40%) sepia(11%) saturate(7488%) hue-rotate(333deg) brightness(101%) contrast(81%);
+    border: 1px solid rgba(0,0,0,0.4);
+}
+
+.profile__name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.profile__userinfo-since {
+    font-size: 13px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.profile__userinfo-from {
+    font-size: 13px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.profile__userinfo-from-icon {
+    width: 15px;
+    display: inline-block;
+}
+
+.profile__userinfo-bio {
+    font-size: 13px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+
+.profile__userinfo-intro {
+    font-weight: 700;
+}
+
+.profile__trusted {
+    position: relative;
+    top: 160px;
+    left: 15%;
+    width: 280px;
+    height: auto;
+    border: 1px solid #EBEBEB;
+}
+
+.profile__trusted-header {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 20px 0px 10px 15px;
+}
+
+.profile__trusted-email {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin: 0px 5px 10px 15px;
+}
+
+.profile__trusted-icon {
+    width: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.profile__trusted-fbconnect {
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+}
+
+.profile__trusted-fb {
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.profile__trusted-connect {
+    margin-left: auto;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    background-color: #3b5998;
+    color: #ffffff;
+    padding: 5px 7px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.profile__right {
+    position: relative;
+    left: 35%;
+    top: -220px;
+}
+
+.profile__tripreview-container {
+    display: flex;
+    width: 400px;
+}
+
+.profile__trip {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.profile__trip-num {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.profile__trip-text {
+    margin-top: 10px;
+    border-bottom: 3px solid rgba(64,217,172,0.3);
+}
+
+.profile__review {
+    margin-left: 40px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.profile__review-num {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.profile__review-text {
+    margin-top: 10px;
+    border-bottom: 3px solid rgba(64,217,172,0.3);
+}
+
+.profile__tripreview-item-container {
+    margin-top: 10px;
+}
+
+
+/* Profile/trip page css */
+.profiletrip__container {
+    border-bottom: 1px solid #ebebeb;
+    width: 700px;
+    height: auto;
+    padding: 20px 0px;
+}
+
+.profiletrip__header {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.profiletrip__details {
+    display: flex;
+}
+
+.profiletrip__img-container {
+    width: 70%;
+    height: 70%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.profiletrip__img-img {
+    border-radius: 10px;
+}
+
+.profiletrip__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profiletrip__item {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0px 10px 30px;
+}
+
+.active {
+    border-bottom: 3px solid #40d9ac
+}
+
+
+/* Profile/reviews page css */
+.profilereview__page {
+    margin-bottom: 210px;
+}
+
+.profilereview__container {
+    border-bottom: 1px solid #ebebeb;
+    width: 700px;
+    padding: 20px 0px;
+}
+
+.profilereview__header-container {
+    display: flex;
+}
+
+.profilereview__header {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.profilereview__header-date {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+.profilereview__title {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.profilereview__body {
+    margin-left: 10px;
+}
+
+
+/* Review Page css */
+.reviewpage-container {
+    width: 100%;
+    margin: 150px 30% -64px 30%;
+}
+
+.reviewpage-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewpage-form-header {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.reviewpage-form-title {
+    margin-bottom: 10px;
+    width: 40%;
+    padding: 10px 10px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.reviewpage-form-textarea {
+    width: 40%;
+    height: 200px;
+    border: 1px solid #ebebeb;
+    padding: 10px 10px;
+}
+
+.reviewpage-button {
+    padding: 10px 10px;
+    background-color: #40d9ac;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 2px;
+    text-align: center;
+    border: 3px solid #40d9ac;
+    transition: all 0.25s ease 0s;
+    position: absolute;
+    margin: 20px auto 0px auto;
+}
+
+.reviewpage-button:hover {
+    background-color: #fdfdfd;
+    color: #40d9ac;
+}
+
+
+/* Media Query css */
+@media screen and (max-width: 1920px) {
+    .camp-header__header {
+        position: relative;
+        top: 50px;
+        left: 20%;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .camp-header__host-details {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 100px;
+        left: 20%;
+    }
+
+    .camp-information__container {
+        position: relative;
+        top: -1050px;
+        left: 20%;
+        margin-bottom: 10px;
+    }
+
+    .camp-activities__container {
+        position: relative;
+        top: -970px;
+        left: 20%;
+        width: 730px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 60px 20px 20px 20px;
+    }
+}
+
+@media screen and (max-width: 1540px) {
+    .camp-header__header {
+        position: relative;
+        top: 50px;
+        left: 8%;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .camp-header__host-details {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 100px;
+        left: 8%;
+    }
+
+    .camp-information__container {
+        position: relative;
+        top: -1050px;
+        left: 8%;
+        margin-bottom: 10px;
+    }
+
+    .camp-activities__container {
+        position: relative;
+        top: -970px;
+        left: 8%;
+        width: 730px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 60px 20px 20px 20px;
+    }
+
+    .profile__userinfo-container {
+        position: relative;
+        top: 130px;
+        left: 7%;
+    }
+
+    .profile__trusted {
+        position: relative;
+        top: 160px;
+        left: 7%;
+        width: 280px;
+        height: auto;
+        border: 1px solid #EBEBEB;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .essentials,
+    .amenities {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer__section1,
+    .footer__section2 {
+        display: none;
+    }
+
+    .footer__sections {
+        display: flex;
+        width: 80%;
+    }
+
+    .profile__userinfo-container {
+        position: relative;
+        top: 130px;
+        left: 4%;
+    }
+
+    .profile__trusted {
+        position: relative;
+        top: 160px;
+        left: 4%;
+        width: 280px;
+        height: auto;
+        border: 1px solid #EBEBEB;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .camp-header__header {
+        position: relative;
+        top: 50px;
+        left: 4%;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .camp-header__host-details {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 100px;
+        left: 4%;
+    }
+
+    .camp-information__container {
+        position: relative;
+        top: -1050px;
+        left: 4%;
+        margin-bottom: 10px;
+    }
+
+    .camp-activities__container {
+        position: relative;
+        top: -970px;
+        left: 4%;
+        width: 730px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 60px 20px 20px 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav__justcash,
+    .nav__about{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .nav__near {
+        display: none;
+    }
+}
