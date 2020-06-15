@@ -19,11 +19,11 @@ app.use(cors());
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
     app.get('/', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+        res.sendFile(path.join(__dirname, 'client/build/index.html'));
     });
 }
 
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Use routes
 app.use("/users", usersRouter);
