@@ -79,7 +79,6 @@ class Mainsearch extends React.Component {
     }
 
     render() {
-        console.log(this.items);
         const { text } = this.state;
         return (
             <form onSubmit={this.handleSubmit} className="header__form">
