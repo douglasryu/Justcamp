@@ -1,19 +1,29 @@
 import React from "react";
+import SearchIcon from '@material-ui/icons/Search';
 
 class Mainsearch extends React.Component {
     constructor(props) {
         super(props);
         this.items = [
-            'Camp Suger Pine',
-            'Sky Ranch North Shelter',
-            'Hobbit Cobin',
-            'Paradise Shores Camping',
-            'Red Cottage in the Woods',
-            'Sky Valley View Camp'
+            "Camp Suger Pine",
+            "Sky Ranch North Shelter",
+            "Hobbit Cobin",
+            "Paradise Shores Camping",
+            "Red Cottage in the Woods",
+            "Sky Valley View Camp",
+            "High Prairie Camp",
+            "Oakley Ridge Preserve",
+            "Desert Oasis",
+            "Rock Hill Campsite",
+            "Dos Rios Tiny Home",
+            "Silver Sunsets",
+            "Lake Mead Overlook",
+            "Pine Cabin",
+            "Star Filled Skies",
         ];
         this.state = {
             suggestions: [],
-            text: ""
+            text: "",
         };
     }
 
@@ -27,11 +37,35 @@ class Mainsearch extends React.Component {
         this.setState(() => ({ suggestions, text: value }));
     }
 
+
     suggestionSelected(value) {
         this.setState(({
             text: value,
             suggestions: []
         }));
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+        const array = [
+            "Camp Suger Pine",
+            "Sky Ranch North Shelter",
+            "Hobbit Cobin",
+            "Paradise Shores Camping",
+            "Red Cottage in the Woods",
+            "Sky Valley View Camp",
+            "High Prairie Camp",
+            "Oakley Ridge Preserve",
+            "Desert Oasis",
+            "Rock Hill Campsite",
+            "Dos Rios Tiny Home",
+            "Silver Sunsets",
+            "Lake Mead Overlook",
+            "Pine Cabin",
+            "Star Filled Skies"
+        ];
+        const targetCamp = (array.indexOf(this.state.text) + 1);
+        this.props.history.push(`/camps/${targetCamp}`);
     }
 
     renderSuggestions() {
@@ -45,12 +79,23 @@ class Mainsearch extends React.Component {
     }
 
     render() {
+        console.log(this.items);
         const { text } = this.state;
         return (
-            <div className="searchbar__container">
-                <input onChange={this.handleSearchInput} type="search" value={text} className="search__input" placeholder="Try Camp Sugar Pine, Star Filled Skies..." />
-                {this.renderSuggestions()}
-            </div>
+            <form onSubmit={this.handleSubmit} className="header__form">
+                <SearchIcon className="header__search-icon" style={{ fontSize: 30 }} />
+                <div className="searchbar__container">
+                    <input onChange={this.handleSearchInput} type="search" value={text} className="search__input" placeholder="Try Camp Sugar Pine, Star Filled Skies..." />
+                    {this.renderSuggestions()}
+                </div>
+                <select className="header__select">
+                    <option>All camping</option>
+                    <option>Camping</option>
+                    <option>Glamping</option>
+                    <option>RVs</option>
+                </select>
+                <button className="header__form-button">Search</button>
+            </form>
         )
     }
 }
