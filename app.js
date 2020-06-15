@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-app.use(express.static(path.join(__dirname, './client/public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Use routes
 app.use("/users", usersRouter);
