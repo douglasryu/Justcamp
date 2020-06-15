@@ -12,8 +12,6 @@ import { fetchCamps } from "./actions/campActions";
 import { BrowserRouter, Route } from "react-router-dom";
 
 const App = props => {
-    const userId = props.userId || window.localStorage.getItem("USER_ID");
-
     useEffect(() => {
         props.loadToken();
     });

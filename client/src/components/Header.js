@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Mainsearch from "./Mainsearch";
 
 const Header = props => {

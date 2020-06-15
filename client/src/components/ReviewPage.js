@@ -6,8 +6,6 @@ import Footer from "./Footer";
 
 
 const ReviewPage = props => {
-    const userId = props.userId || window.localStorage.getItem("USER_ID");
-
     useEffect(() => {
         window.scrollTo(0, 0)
     }, []);
