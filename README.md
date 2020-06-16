@@ -2,7 +2,7 @@
 
 Justcamp is a Hipcamp clone designed to provide campsite information, booking, and the ability to leave a reviews. The Justcamp camps list is searchable by camp name, and each camp details page shows the available amenities and activities along with an interactive Google Map.
 
-Visit the live site [here](https://justcamp.herokuapp.com/).
+Visit the live site [here](http://justcamp.herokuapp.com/).
 
 # Key Features
 
