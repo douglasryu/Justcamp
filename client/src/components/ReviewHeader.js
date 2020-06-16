@@ -21,7 +21,7 @@ const ReviewHeader = props => {
     const handleSubmit = event => {
         event.preventDefault();
         props.createReview(userId, campId, titleInputValue, bodyInputValue);
-        window.location.href = `/profile/reviews`;
+        props.history.push(`/profile/reviews`);
     }
 
     return (
