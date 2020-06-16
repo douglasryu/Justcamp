@@ -14,15 +14,15 @@ router.get("/", asyncHandler(async (req, res, next) => {
 
 
 //Get camp details
-router.get("/:campId", requireAuth, asyncHandler(async (req, res, next) => {
-    const camp = await Campsite.findOne({
-        where: {
-            id: req.params.campId,
-        },
-    });
+// router.get("/:campId", requireAuth, asyncHandler(async (req, res, next) => {
+//     const camp = await Campsite.findOne({
+//         where: {
+//             id: req.params.campId,
+//         },
+//     });
 
-    res.json({ camp });
-}));
+//     res.json({ camp });
+// }));
 
 
 module.exports = router;
