@@ -14,14 +14,14 @@ const Signin = props => {
         event.preventDefault();
         await props.login(signinemail, signinpassword);
         props.closeModal();
-        window.location.reload();
+        // window.location.reload();
     };
 
     const handleDemoUser = async (event) => {
         event.preventDefault();
         await props.login("demouser@demouser.com", "demouser");
         props.closeModal();
-        window.location.reload();
+        // window.location.reload();
     }
 
     return (
