@@ -26,6 +26,9 @@ Visit the live site [here](https://justcamp.herokuapp.com/).
 -   JWT & Bcryptjs
 -   Google Maps API
 
+# Main Search Bar
+
+
 
 # Planned Feature Components
 

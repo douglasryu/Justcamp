@@ -32,9 +32,9 @@ app.use("/camps", campsRouter);
 app.use("/reservations", reservationsRouter);
 app.use("/reviews", reviewsRouter);
 
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-})
+// app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+// })
 
 // ERROR HANDLERS - Catch unhandled requests and throw 404 error
 app.use((req, res, next) => {
