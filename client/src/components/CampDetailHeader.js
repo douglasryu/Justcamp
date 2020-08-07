@@ -125,7 +125,7 @@ const CampDetailHeader = props => {
                                 <input className="booking__form-checkout-input" type="date" onChange={handleCheckoutDate} placeholder="Select date" />
                             </div>
                             <div className="booking__form-guest">Guests
-                                <input className="booking__form-guest-input" type="number" onChange={handleGuestInput} placeholder="0" />
+                                <input className="booking__form-guest-input" min="0" type="number" onChange={handleGuestInput} placeholder="0" />
                             </div>
                         </div>
                         <div className="booking__form-subtotal-container">
