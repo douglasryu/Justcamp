@@ -162,7 +162,7 @@ const CampDetailHeader = props => {
                         </div>
                         <div className="camparea__type-container">
                             <img className="camparea__icon" src={require("../assets/camp_icons/numsites.png")} alt="camparea-icon" />
-                            <div className="camparea__type">{campDetailObj.numSites}</div>
+                            {campDetailObj.numSites <= 1 ? <div className="camparea__type">{campDetailObj.numSites} site</div> : <div className="camparea__type">{campDetailObj.numSites} sites</div>}
                         </div>
                         <div className="camparea__type-container">
                             <img className="camparea__icon" src={require("../assets/camp_icons/maxcapacity.png")} alt="camparea-icon" />
