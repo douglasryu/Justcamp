@@ -355,7 +355,23 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+/* .image__carousel {
+    display: flex;
+} */
+
+.react-multi-carousel-item {
     height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* margin-left: 20px; */
+}
+
+.camp-header__image {
+    min-height: 510px;
 }
 
 .camp-header__image1 {
@@ -363,7 +379,7 @@ body {
     max-height: 500px;
     height: 500px;
     max-width: 700px;
-    margin-left: 40px;
+    /* margin-left: 40px; */
 }
 
 .camp-header__image2 {
@@ -371,7 +387,7 @@ body {
     max-height: 500px;
     height: 500px;
     max-width: 700px;
-    margin-left: 40px;
+    /* margin-left: 40px; */
 }
 
 .camp-header__image3 {
@@ -379,7 +395,7 @@ body {
     max-height: 500px;
     height: 500px;
     max-width: 700px;
-    margin-left: 40px;
+    /* margin-left: 40px; */
 }
 
 .previous {
