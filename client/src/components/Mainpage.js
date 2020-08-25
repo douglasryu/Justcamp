@@ -16,7 +16,7 @@ const Mainpage = props => {
             <Header {...props} />
             <Camplist />
             <About />
-            <Press />
+            {/* <Press /> */}
             <Footer />
         </>
     );

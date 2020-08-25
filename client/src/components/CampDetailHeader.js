@@ -139,13 +139,6 @@ const CampDetailHeader = props => {
                 </div>
             </div>
             <div className="camp-header__container">
-                {/* <button className="previous">❮</button>
-                <div className="camp-header__image-container">
-                    <img className="camp-header__image1" src={require(`../assets/${imageId}.jpg`)} alt="camp-pic" />
-                    <img className="camp-header__image2" src={require(`../assets/${secondImage(imageId)}.jpg`)} alt="camp-pic" />
-                    <img className="camp-header__image3" src={require(`../assets/${thirdImage(imageId)}.jpg`)} alt="camp-pic" />
-                </div>
-                <button className="next">❯</button> */}
                 <ImageCarousel campId={campId} />
                 <div className="camp-header__header">{campDetailObj.campName}</div>
                 <div className="camp-header__host-details">

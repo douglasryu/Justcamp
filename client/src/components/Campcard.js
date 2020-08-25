@@ -9,7 +9,7 @@ const Campcard = props => {
             <Link to={`/camps/${mainImageId}`}>
                 <article className="campentry">
                     <div className="campentry__photo-container">
-                        <img src={require(`../assets/${mainImageId}.jpg`)} alt={mainImageId} className="campentry__photo" />
+                        <img src={`https://justcamp.s3.us-east-2.amazonaws.com/${parseInt(mainImageId, 10) * 3 - 2}.jpg`} alt={mainImageId} className="campentry__photo" />
                     </div>
                     <div className="campentry__text-contianer">
                         <div className="campentry__text-header">{props.camp.campName}</div>

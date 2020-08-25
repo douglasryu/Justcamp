@@ -309,6 +309,13 @@ body {
     height: 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.campentry__photo {
+    max-height: 450px;
+    /* height: 300px; */
+    width: 400px;
 }
 
 .campentry__text-contianer {
@@ -367,49 +374,16 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* margin-left: 20px; */
 }
+
+/* .camp-header__image--container {
+    padding: 0 5px;
+} */
 
 .camp-header__image {
     min-height: 510px;
-}
-
-.camp-header__image1 {
-    display: block;
-    max-height: 500px;
-    height: 500px;
-    max-width: 700px;
-    /* margin-left: 40px; */
-}
-
-.camp-header__image2 {
-    display: block;
-    max-height: 500px;
-    height: 500px;
-    max-width: 700px;
-    /* margin-left: 40px; */
-}
-
-.camp-header__image3 {
-    display: block;
-    max-height: 500px;
-    height: 500px;
-    max-width: 700px;
-    /* margin-left: 40px; */
-}
-
-.previous {
-    font-size: 40px;
-    position: absolute;
-    top: 210px;
-    left: 30px;
-}
-
-.next {
-    font-size: 40px;
-    position: absolute;
-    top: 210px;
-    right: 30px;
+    /* max-width: 810px; */
+    min-width: 850px;
 }
 
 .camp-header__header {
@@ -474,9 +448,9 @@ body {
 }
 
 .form-invisible {
-    z-index: 1;
+    z-index: 4;
     position: sticky;
-    top: 60px;
+    top: 0px;
 }
 
 .booking__form-container {
@@ -490,6 +464,11 @@ body {
     height: auto;
     z-index: 1;
 }
+
+/* .booking__form {
+    position: absolute;
+    top: 0px;
+} */
 
 .booking__form-price {
     font-size: 20px;

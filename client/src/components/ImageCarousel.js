@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -8,7 +7,8 @@ const ImageCarousel = (props) => {
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
-            items: 3
+            items: 3,
+            // partialVisibilityGutter: 40
         },
         largerDesktop: {
             breakpoint: { max: 3000, min: 2500 },
@@ -24,47 +24,38 @@ const ImageCarousel = (props) => {
         },
         smallerDesktop: {
             breakpoint: { max: 1024, min: 750 },
-            items: 3
+            items: 2,
+            // partialVisibilityGutter: 30
         },
         tablet: {
             breakpoint: { max: 750, min: 650 },
-            items: 3
+            items: 2
         },
         largerMobile: {
             breakpoint: { max: 650, min: 464 },
-            items: 3
+            items: 1
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 2
+            breakpoint: { max: 464, min: 50 },
+            items: 2,
+            // partialVisibilityGutter: 30
         }
     };
 
-
-    // if (props.products.length === 0) return null;
-
     return (
-        <Carousel className="image__carousel" responsive={responsive} infinite>
-            <img className="camp-header__image" src={`https://justcamp.s3.us-east-2.amazonaws.com/${parseInt(props.campId, 10) * 3 - 2}.jpg`} alt="featured-item" />
-            <img className="camp-header__image" src={`https://justcamp.s3.us-east-2.amazonaws.com/${parseInt(props.campId, 10) * 3 - 1}.jpg`} alt="featured-item" />
-            <img className="camp-header__image" src={`https://justcamp.s3.us-east-2.amazonaws.com/${parseInt(props.campId, 10) * 3}.jpg`} alt="featured-item" />
+        <Carousel className="image__carousel" swipeable keyBoardControl draggable={false} responsive={responsive} infinite>
+            <div className="camp-header__image--container">
+                <img className="camp-header__image" src={`https://justcamp.s3.us-east-2.amazonaws.com/${parseInt(props.campId, 10) * 3 - 2}.jpg`} alt="featured-item" />
+            </div>
+            <div className="camp-header__image--container">
+                <img className="camp-header__image" src={`https://justcamp.s3.us-east-2.amazonaws.com/${parseInt(props.campId, 10) * 3 - 1}.jpg`} alt="featured-item" />
+            </div>
+            <div className="camp-header__image--container">
+                <img className="camp-header__image" src={`https://justcamp.s3.us-east-2.amazonaws.com/${parseInt(props.campId, 10) * 3}.jpg`} alt="featured-item" />
+            </div>
         </Carousel >
     );
 }
 
 
 export default ImageCarousel;
-
-// const mapStateToProps = state => {
-//     return {
-//         // products: state.session.products
-//         // products: Object.values(state.products)
-//     }
-// }
-
-
-// export default connect(
-//     // mapStateToPro    ps
-// )(
-//     ImageCarousel
-// );
