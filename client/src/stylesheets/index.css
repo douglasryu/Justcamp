@@ -51,12 +51,6 @@ body {
     border-bottom: 1.5px solid #40d9ac;
 }
 
-.nav__near,
-.nav__about,
-.nav__justcash {
-    cursor: not-allowed;
-}
-
 .nav__host {
     font-size: 15px;
     margin-right: 20px;
@@ -75,7 +69,6 @@ body {
 .nav__host:hover {
     background-color: #fdfdfd;
     color: #40d9ac;
-    cursor: not-allowed;
 }
 
 /* Modal css */
@@ -749,7 +742,7 @@ input[type=number]::-webkit-inner-spin-button {
 /* Footer css */
 .footer__border {
     position: relative;
-    top: 470px;
+    top: 400px;
     border-top: 1px solid #ebebeb;
 
 }
@@ -787,7 +780,12 @@ input[type=number]::-webkit-inner-spin-button {
 .footer__section-item {
     font-size: 15px;
     margin-bottom: 10px;
-    cursor: not-allowed;
+    display: border;
+}
+
+.footer__section2 {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__section-text {
@@ -806,6 +804,7 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 15px;
 }
 
+.footer__section-item:hover,
 .createdby__name:hover {
     color: rgb(231, 73, 73);
     cursor: pointer;

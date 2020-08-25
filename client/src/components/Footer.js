@@ -7,20 +7,14 @@ const Footer = () => (
             <div className="footer__logo">JUSTC<img src={require("../assets/app_logos/logoblack.svg")} alt="logo" className="footer__icon" />MP</div>
             <div className="footer__sections">
                 <div className="footer__section1">
-                    <div className="footer__section-header">About us</div>
-                    <div className="footer__section-item">Careers</div>
-                    <div className="footer__section-item">Journal</div>
-                    <div className="footer__section-item">Gift Cards</div>
-                    <div className="footer__section-item">Contact</div>
-                    <div className="footer__section-item">Camper FAQ</div>
+                    <div className="footer__section-header">Portfolio</div>
+                    <a href="https://douglasryu.github.io/" className="footer__section-item">Visit my Website</a>
                 </div>
                 <div className="footer__section2">
-                    <div className="footer__section-header">Hosting</div>
-                    <div className="footer__section-item">Becoming a Host</div>
-                    <div className="footer__section-item">Is my land a fit?</div>
-                    <div className="footer__section-item">Insurance</div>
-                    <div className="footer__section-item">Standards</div>
-                    <div className="footer__section-item">Hosting FAQ</div>
+                    <div className="footer__section-header">Projects</div>
+                    <a href="https://elbowsapp.herokuapp.com/" className="footer__section-item">Elbows</a>
+                    <a href="https://rockinhood.herokuapp.com/" className="footer__section-item">Rockinhood</a>
+                    <a href="https://aa-flash-app.herokuapp.com/" className="footer__section-item">Flash</a>
                 </div>
                 <div className="footer__section3">
                     <div className="footer__section-header">Justcamp is everywhere you want to camp.</div>
@@ -28,7 +22,7 @@ const Footer = () => (
                 </div>
             </div>
             <div className="createdby">Created by</div>
-            <a className="createdby__name" href="https://github.com/douglasryu">Douglas Ryu <GitHubIcon className="createdby__github" /></a>
+            <a className="createdby__name" href="https://github.com/douglasryu/Justcamp">Douglas Ryu <GitHubIcon className="createdby__github" /> Repository</a>
         </div>
         <div className="footer__end">
             <div className="footer__end-left">© 2020 Justcamp, Inc. All rights reserved.</div>

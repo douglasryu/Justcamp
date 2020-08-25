@@ -22,14 +22,13 @@ const ProfileHeader = props => {
                     </div>
                     <div className="profile__userinfo-since"><span role="img" aria-label="love">❤️</span> Justcamper since 2020</div>
                     <div className="profile__userinfo-from"><img className="profile__userinfo-from-icon" src={require("../assets/camp_icons/from.png")} alt="profile-from" /> Where are you from?</div>
-                    <div className="profile__userinfo-bio"><span className="profile__userinfo-intro">Intro:</span> Introduce yourself to the community! Add a short bio...</div>
+                    <div className="profile__userinfo-bio"><span className="profile__userinfo-intro">Intro:</span> Welcome to Justcamp! Hope you enjoy your trips!</div>
                 </div>
                 <div className="profile__trusted">
                     <div className="profile__trusted-header">Trusted Justcamper</div>
                     <div className="profile__trusted-email"><img className="profile__trusted-icon" src={require("../assets/camp_icons/check.png")} alt="profile-trusted" /> Email address</div>
                     <div className="profile__trusted-fbconnect">
                         <div className="profile__trusted-fb">facebook</div>
-                        <div className="profile__trusted-connect">+Connect</div>
                     </div>
                 </div>
             </div>

@@ -70,24 +70,6 @@ const CampDetailHeader = props => {
         return (start - end) / oneDay;
     }
 
-    const imageId = campId;
-
-    const secondImage = (imageId) => {
-        if (imageId + 4 <= 15) {
-            return (imageId + 4);
-        } else {
-            return (imageId - 4);
-        }
-    }
-
-    const thirdImage = (imageId) => {
-        if (imageId + 5 <= 15) {
-            return (imageId + 5);
-        } else {
-            return (imageId - 5);
-        }
-    }
-
     if (Object.keys(props.campsList).length < 1) {
         return null;
     }
