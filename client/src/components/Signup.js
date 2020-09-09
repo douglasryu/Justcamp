@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 
 import { createUser } from "../actions/sessionActions";
+import { login } from "../actions/sessionActions";
 import { closeModal } from "../actions/modalActions";
 
 const Signup = props => {
@@ -24,6 +25,12 @@ const Signup = props => {
         window.location.reload();
     };
 
+    const handleDemoUser = async (event) => {
+        event.preventDefault();
+        await props.login("demouser@demouser.com", "demouser");
+        props.closeModal();
+    }
+
     return (
         <>
             <div className="modal__header">Join Justcamp</div>
@@ -36,6 +43,7 @@ const Signup = props => {
                 <input onChange={updatePassword} value={password} className="form__input" placeholder="Create a password" />
                 <input type="number" onChange={updateZipcode} value={zipcode} className="form__input" placeholder="Zip code" />
                 <button className="form__button">Join Justcamp</button>
+                <button className="demo__button" onClick={handleDemoUser}>Demo User</button>
             </form>
         </>
     );
@@ -43,6 +51,7 @@ const Signup = props => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        login: (email, password) => dispatch(login(email, password)),
         createUser: (firstName, lastName, email, password, zipcode) => dispatch(createUser(firstName, lastName, email, password, zipcode)),
         closeModal: () => dispatch(closeModal())
     }
