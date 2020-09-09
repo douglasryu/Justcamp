@@ -20,7 +20,7 @@ body {
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 4;
+    z-index: 5;
 }
 
 .nav__logo {
@@ -443,7 +443,7 @@ body {
 .form-invisible {
     z-index: 4;
     position: sticky;
-    top: 0px;
+    top: 80px;
 }
 
 .booking__form-container {
@@ -455,7 +455,7 @@ body {
     border-radius: 2px;
     width: 300px;
     height: auto;
-    z-index: 1;
+    z-index: 4;
 }
 
 /* .booking__form {
@@ -688,7 +688,7 @@ input[type=number]::-webkit-inner-spin-button {
     position: relative;
     top: 250px;
     padding-top: 50px;
-    margin-bottom: 400px;
+    /* margin-bottom: 400px; */
     border-top: 1px solid #ebebeb;
     display: flex;
     flex-direction: column;
@@ -743,7 +743,7 @@ input[type=number]::-webkit-inner-spin-button {
 /* Footer css */
 .footer__border {
     position: relative;
-    /* top: 400px; */
+    top: 400px;
     bottom: 0;
     border-top: 1px solid #ebebeb;
 }
@@ -839,7 +839,7 @@ input[type=number]::-webkit-inner-spin-button {
 .map-container {
     position: relative;
     top: -860px;
-    margin-bottom: -300px;
+    margin-bottom: -700px;
 }
 
 
@@ -847,7 +847,7 @@ input[type=number]::-webkit-inner-spin-button {
 .profile__wrap {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     justify-content: space-between;
 }
 
@@ -856,13 +856,14 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .profile__footer {
+    margin-top: 400px;
     flex-shrink: 0;
 }
 
 .profile__page {
-    margin-bottom: -328px;
+    margin-bottom: -528px;
     overflow-x: hidden;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .profile__userinfo-container {
@@ -1019,6 +1020,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .profile__tripreview-item-container {
     margin-top: 10px;
+    min-height: 51.2vh;
 }
 
 
@@ -1071,6 +1073,7 @@ input[type=number]::-webkit-inner-spin-button {
 /* Profile/reviews page css */
 .profilereview__page {
     margin-bottom: 210px;
+    min-height: 35.4vh;
 }
 
 .profilereview__container {
