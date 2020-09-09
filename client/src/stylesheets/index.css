@@ -688,6 +688,7 @@ input[type=number]::-webkit-inner-spin-button {
     position: relative;
     top: 250px;
     padding-top: 50px;
+    margin-bottom: 400px;
     border-top: 1px solid #ebebeb;
     display: flex;
     flex-direction: column;
@@ -742,9 +743,9 @@ input[type=number]::-webkit-inner-spin-button {
 /* Footer css */
 .footer__border {
     position: relative;
-    top: 400px;
+    /* top: 400px; */
+    bottom: 0;
     border-top: 1px solid #ebebeb;
-
 }
 
 .footer__container {
@@ -838,15 +839,30 @@ input[type=number]::-webkit-inner-spin-button {
 .map-container {
     position: relative;
     top: -860px;
-    margin-bottom: -700px;
+    margin-bottom: -300px;
 }
 
 
-
 /* Profile Page css */
+.profile__wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.profile__header {
+    flex: 1 0 auto;
+}
+
+.profile__footer {
+    flex-shrink: 0;
+}
+
 .profile__page {
     margin-bottom: -328px;
     overflow-x: hidden;
+    height: 100vh;
 }
 
 .profile__userinfo-container {

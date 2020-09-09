@@ -26,10 +26,10 @@ const ProfilePage = props => {
     }, [userId]);
 
     return (
-        <>
-            <ProfileHeader {...props} />
-            <Footer />
-        </>
+        <div className="profile__wrap">
+            <ProfileHeader className="profile__header" {...props} />
+            <Footer className="profile__footer" />
+        </div>
     );
 }
 

@@ -43,6 +43,10 @@ export const login = (email, password) => async dispatch => {
         body: JSON.stringify({ email, password }),
     });
 
+    if (response.status !== 200) {
+        return response;
+    }
+
     if (response.ok) {
         const payload = await response.json();
         window.localStorage.setItem(TOKEN_KEY, payload.token);
@@ -51,6 +55,8 @@ export const login = (email, password) => async dispatch => {
         window.localStorage.setItem("justcamp/authentication/lastName", payload.lastName);
         dispatch(setToken(payload));
     }
+    const result = { success: "login success" };
+    return result;
 };
 
 export const logout = () => (dispatch) => {
