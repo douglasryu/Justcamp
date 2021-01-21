@@ -29,7 +29,10 @@ Visit the live site [here](http://justcamp.herokuapp.com/).
 -   JWT & Bcryptjs
 -   Google Maps API
 
-# Main Search Bar
+# Search Bar
+# Date and Time 
+# Trips and Reviews
+
 
 
 
