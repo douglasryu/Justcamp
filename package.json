@@ -33,6 +33,9 @@
     "devDependencies": {
         "nodemon": "^2.0.4"
     },
+    "engines": {
+        "node": "13.x"
+    },
     "scripts": {
         "db:create": "dotenv sequelize-cli db:create",
         "db:drop": "dotenv sequelize-cli db:drop",
