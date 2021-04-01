@@ -13,23 +13,11 @@ module.exports = {
         database,
         host,
         dialect: 'postgres',
-        dialectOptions: {
-            ssl: {
-                require: true,
-                rejectUnauthorized: false,
-            }
-        }
         seederStorage: 'sequelize',
     },
     production: {
         dialect: 'postgres',
         seederStorage: 'sequelize',
-        use_env_variable: 'DATABASE_URL',
-        dialectOptions: {
-            ssl: {
-                require: true,
-                rejectUnauthorized: false,
-            }
-        }
+        use_env_variable: 'DATABASE_URL'
     }
 };
