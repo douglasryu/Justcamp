@@ -1280,6 +1280,69 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 1040px) {
+    .header__container {
+        height: 150px;
+        /* margin: 110px 10vw 0px 10vw; */
+        /* left: 100px; */
+        /* width: 100%; */
+    }
+
+    .header__form {
+        height: 60px;
+        width: 85vw;
+        /* padding: 17px 17px 17px 0px; */
+        box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.1);
+        display: flex;
+    }
+
+    .search__input {
+        width: 50vw;
+        height: 60px;
+        font-size: 18px;
+        padding-left: 40px;
+        border: 1px solid #ebebeb;
+        box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.1);
+        align-self: center;
+        margin-right: auto;
+        padding-right: 30px;
+    }
+
+    .header__select {
+        font-size: 15px;
+        font-weight: 500;
+        color: #333333;
+        padding: 10px;
+        margin-right: 13px;
+        margin-left: 13px;
+        border: 1px solid #ebebeb;
+        box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .header__form-button {
+        /* margin: 0px auto; */
+        background-color: #40d9ac;
+        color: #ffffff;
+        width: 104px;
+        height: 54px;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 2px;
+        text-align: center;
+        border: 3px solid #40d9ac;
+        transition: all 0.25s ease 0s;
+    }
+
+    .camplist {
+        /* max-width: 1060px; */
+        width: 100vw;
+        margin: 0 auto;
+        position: relative;
+        top: 150px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
     .camp-header__header {
         position: relative;
         top: 50px;
